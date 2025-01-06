@@ -1,5 +1,5 @@
 // Type score d'équipe
-type Score = { equipeA: number; equipeB: number };
+export type Score = { equipeA: number; equipeB: number };
 
 // Type résultat du tir
 type ShotResult = "A" | "B" | "miss";
@@ -83,3 +83,6 @@ const displayHistory = (history: ShotHistory, winner: string): void => {
 
 const { winner, history } = simulatePenaltyShootout(); // Lance la simulation des tirs
 displayHistory(history, winner); // Affiche l'historique
+
+
+export { updateScore, checkWinner, randomShot, simulatePenaltyShootout };
